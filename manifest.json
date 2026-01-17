@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Abang Colek WOCS",
     "description": "WhatsApp Operations Command System - CRM Extension for WhatsApp Web",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": "Liurleleh House",
     "icons": {
         "16": "icons/icon16.png",
@@ -20,10 +20,20 @@
     "permissions": [
         "storage",
         "activeTab",
-        "scripting"
+        "scripting",
+        "notifications",
+        "clipboardRead",
+        "clipboardWrite",
+        "downloads",
+        "alarms",
+        "tabs"
     ],
     "host_permissions": [
-        "https://web.whatsapp.com/*"
+        "https://web.whatsapp.com/*",
+        "https://api.openai.com/*",
+        "https://api.anthropic.com/*",
+        "https://generativelanguage.googleapis.com/*",
+        "https://*.supabase.co/*"
     ],
     "content_scripts": [
         {
@@ -31,17 +41,6 @@
                 "https://web.whatsapp.com/*"
             ],
             "js": [
-                "content/components/Analytics.js",
-                "content/components/Templates.js",
-                "content/components/Export.js",
-                "content/components/Broadcasts.js",
-                "content/components/Audience.js",
-                "content/components/Tools.js",
-                "content/components/Integrations.js",
-                "content/components/Settings.js",
-                "content/components/Support.js",
-                "content/components/Sidebar.js",
-                "content/components/TopNav.js",
                 "content/content.js"
             ],
             "css": [
@@ -56,7 +55,8 @@
     "web_accessible_resources": [
         {
             "resources": [
-                "icons/*"
+                "icons/*",
+                "content/*"
             ],
             "matches": [
                 "https://web.whatsapp.com/*"
