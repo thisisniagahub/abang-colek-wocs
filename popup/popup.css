@@ -1,0 +1,246 @@
+/* WOCS Popup Styles */
+:root {
+    --primary: #f59e0b;
+    --primary-dark: #d97706;
+    --bg-dark: #1f2937;
+    --bg-card: #374151;
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+    --success: #10b981;
+    --error: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    width: 320px;
+    min-height: 400px;
+}
+
+.container {
+    padding: 16px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--bg-card);
+}
+
+.logo {
+    font-size: 32px;
+}
+
+.title h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.subtitle {
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Status */
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.status.connected {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--success);
+}
+
+.status.disconnected {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--error);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 16px;
+}
+
+.section h2 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.section.hidden {
+    display: none;
+}
+
+/* Action Grid */
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 12px;
+    background: var(--bg-card);
+    border: none;
+    border-radius: 8px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+.action-btn .icon {
+    font-size: 20px;
+}
+
+.action-btn span:last-child {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* Template List */
+.template-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.template-btn {
+    width: 100%;
+    padding: 10px 12px;
+    background: var(--bg-card);
+    border: none;
+    border-radius: 6px;
+    color: var(--text-primary);
+    text-align: left;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.template-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* Bulk Section */
+#bulkSection textarea {
+    width: 100%;
+    padding: 10px;
+    background: var(--bg-card);
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    color: var(--text-primary);
+    resize: none;
+    font-family: inherit;
+    margin-bottom: 8px;
+}
+
+#bulkSection input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    background: var(--bg-card);
+    border: 1px dashed #4b5563;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 10px;
+    background: var(--primary);
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    background: var(--bg-card);
+    border-radius: 8px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 10px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--bg-card);
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer a:hover {
+    color: var(--primary);
+}

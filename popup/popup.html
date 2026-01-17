@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOCS - Abang Colek</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">🌶️</div>
+            <div class="title">
+                <h1>WOCS</h1>
+                <span class="subtitle">WhatsApp CRM</span>
+            </div>
+        </header>
+
+        <!-- Status -->
+        <div id="status" class="status disconnected">
+            <span class="status-dot"></span>
+            <span class="status-text">Not connected to WhatsApp Web</span>
+        </div>
+
+        <!-- Quick Actions -->
+        <section class="section">
+            <h2>⚡ Quick Actions</h2>
+            <div class="action-grid">
+                <button id="exportContacts" class="action-btn">
+                    <span class="icon">📥</span>
+                    <span>Export Contacts</span>
+                </button>
+                <button id="bulkMessage" class="action-btn">
+                    <span class="icon">📤</span>
+                    <span>Bulk Message</span>
+                </button>
+                <button id="templates" class="action-btn">
+                    <span class="icon">📝</span>
+                    <span>Templates</span>
+                </button>
+                <button id="labels" class="action-btn">
+                    <span class="icon">🏷️</span>
+                    <span>Labels</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Templates Section (Hidden by default) -->
+        <section id="templatesSection" class="section hidden">
+            <h2>📝 Quick Templates</h2>
+            <div class="template-list">
+                <button class="template-btn" data-template="order">
+                    ✅ Order Confirmation
+                </button>
+                <button class="template-btn" data-template="reminder">
+                    📅 Event Reminder
+                </button>
+                <button class="template-btn" data-template="thanks">
+                    🙏 Thank You
+                </button>
+                <button class="template-btn" data-template="promo">
+                    🔥 Promo Blast
+                </button>
+            </div>
+        </section>
+
+        <!-- Bulk Message Section (Hidden by default) -->
+        <section id="bulkSection" class="section hidden">
+            <h2>📤 Bulk Message</h2>
+            <textarea id="bulkMessage" placeholder="Enter your message..." rows="3"></textarea>
+            <input type="file" id="contactFile" accept=".csv,.json" />
+            <button id="sendBulk" class="primary-btn">Generate wa.me Links</button>
+        </section>
+
+        <!-- Stats -->
+        <section class="section stats">
+            <div class="stat">
+                <span class="stat-value" id="contactCount">0</span>
+                <span class="stat-label">Contacts</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="messageCount">0</span>
+                <span class="stat-label">Messages Sent</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="labelCount">0</span>
+                <span class="stat-label">Labels</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <span>Abang Colek WOCS v1.0</span>
+            <a href="#" id="settings">⚙️</a>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

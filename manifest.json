@@ -1,0 +1,66 @@
+{
+    "manifest_version": 3,
+    "name": "Abang Colek WOCS",
+    "description": "WhatsApp Operations Command System - CRM Extension for WhatsApp Web",
+    "version": "1.0.0",
+    "author": "Liurleleh House",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png"
+        },
+        "default_title": "WOCS - WhatsApp CRM"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://web.whatsapp.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ],
+            "js": [
+                "content/components/Analytics.js",
+                "content/components/Templates.js",
+                "content/components/Export.js",
+                "content/components/Broadcasts.js",
+                "content/components/Audience.js",
+                "content/components/Tools.js",
+                "content/components/Integrations.js",
+                "content/components/Settings.js",
+                "content/components/Support.js",
+                "content/components/Sidebar.js",
+                "content/components/TopNav.js",
+                "content/content.js"
+            ],
+            "css": [
+                "content/styles.css"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "background": {
+        "service_worker": "background/service-worker.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "icons/*"
+            ],
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ]
+        }
+    ]
+}
