@@ -390,6 +390,48 @@
     color: white;
 }
 
+/* Tools Panel */
+.wocs-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 4px;
+}
+
+.wocs-tool-card {
+    background: var(--wocs-bg-card);
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid var(--wocs-border);
+}
+
+.wocs-tool-card h4 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    color: var(--wocs-text);
+}
+
+.wocs-tool-card input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    background: var(--wocs-bg-input);
+    border: 2px solid var(--wocs-border);
+    border-radius: 10px;
+    color: var(--wocs-text);
+    font-size: 14px;
+}
+
+.wocs-tool-card input:focus {
+    outline: none;
+    border-color: var(--wocs-primary);
+}
+
+.wocs-tool-card button {
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
 .wocs-empty {
     text-align: center;
     color: var(--wocs-text-muted);
